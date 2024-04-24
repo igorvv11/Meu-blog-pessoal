@@ -3,7 +3,7 @@
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(min-width:768px) and (max-width: 1023px)";
 
-.marginBottom8{
+.marginBottom8 {
     margin-bottom: 8px;
 }
 
@@ -14,80 +14,83 @@
     box-sizing: border-box;
 }
 
-body{
-        background-color: #colors[backgroundColor];
+body {
+    background-color: #colors[backgroundColor];
     color: #colors[textColor];
-    
 }
 
-li{
+li {
     list-style: none;
 }
+
 .container {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     @media @breakpointMobile {
-        max-width: 70%;
+        max-width: 90%;
     }
-    @media @breakpointTablet{
-        max-width: 80%;
+    @media @breakpointTablet {
+        max-width: 90%;
     }
 }
 
-header{
+header {
     padding-bottom: 24px;
 
-    .profile-avatar{
+    .profile-avatar {
         max-width: 120px;
         display: block;
         margin: 0 auto 24px;
         border-radius: 55%;
-        box-shadow: 12px 12px  32px #colors[buttonColor];
+        box-shadow: 12px 12px 32px #colors[buttonColor];
     }
 }
-.profile-bio{
+
+.profile-bio {
     text-align: center;
-    &-name{
+    &-name {
         font-size: 16px;
         .marginBottom8()
     }
-    &-subtitle{
+    &-subtitle {
         font-size: 14px;
         .marginBottom8()
     }
-    &-description{
+    &-description {
         font-size: 14px;
         opacity: .7;
     }
 }
+
 .social-links {
     display: flex;
     justify-content: space-between;
-    max-width:240px;
+    max-width: 240px;
     width: 100%;
     margin: 0 auto;
 
-    li{
-        img{
-            &:hover{
+    li {
+        img {
+            &:hover {
                 box-shadow: 0 0 24px #colors[buttonColor];
                 transition: all ease .3s;
                 transform: scale(1.3);
-            
+
             }
         }
     }
 }
-.project-list{
+
+.project-list {
     margin-top: 32px;
-    &-item{
-        a{
+    &-item {
+        a {
             text-decoration: none;
             background-color: #colors[buttonColor];
             display: block;
@@ -100,13 +103,12 @@ header{
             border: 2px solid #colors[buttonColor];
             transition: all ease .5s;
 
-            &:hover{
+            &:hover {
                 color: #colors[buttonColor];
                 box-shadow: 0 0 24px #colors[buttonColor];
                 background-color: transparent;
 
             }
-
         }
     }
 }
